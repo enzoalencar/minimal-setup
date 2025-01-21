@@ -2,7 +2,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.2.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "minimal", "minimal\minimal.csproj", "{F4093985-96E7-B6C7-2554-51D1453EF7F7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Minimal.Api", "src\Minimal.Api\Minimal.Api.csproj", "{F4093985-96E7-B6C7-2554-51D1453EF7F7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{973913BD-FDD1-4D11-86E3-1BFA6468E216}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,5 +22,8 @@ Global
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F21A12AB-2F7E-4FB9-9F20-6C0D87830E07}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F4093985-96E7-B6C7-2554-51D1453EF7F7} = {973913BD-FDD1-4D11-86E3-1BFA6468E216}
 	EndGlobalSection
 EndGlobal
