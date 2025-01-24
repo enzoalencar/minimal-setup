@@ -8,6 +8,12 @@
 
   <ItemGroup>
     <PackageReference Include="FastEndpoints" Version="5.33.0" />
+    <PackageReference Include="FastEndpoints.Security" Version="5.33.0" />
+    <PackageReference Include="FastEndpoints.Swagger" Version="5.33.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Minimal.Features\Minimal.Features.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,4 +1,4 @@
-﻿namespace Minimal.Domain.Shared.UserStatus;
+﻿namespace Minimal.Domain.Shared.Enums;
 
 public enum UserStatus
 {
