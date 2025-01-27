@@ -1,5 +1,5 @@
-using FastEndpoints;
 using Microsoft.AspNetCore.Authorization;
+using FastEndpoints;
 using Minimal.Features.Users.Commands;
 
 namespace Minimal.Api.Endpoints.Users;
