@@ -12,8 +12,7 @@ public class CreateUserEndpoint : Endpoint<CreateUserRequest, CreateUserResponse
     {
         await SendAsync(new()
         {
-            FullName = req.FirstName + " " + req.LastName,
-            IsOver18 = req.Age > 18
+            Message = $"User {req.Name} was created"
         });
     }
 }

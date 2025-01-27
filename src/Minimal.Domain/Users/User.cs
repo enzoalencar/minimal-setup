@@ -1,7 +1,7 @@
 ﻿using Minimal.Domain.Shared.EntityModel;
 using Minimal.Domain.Shared.Enums;
 
-namespace Minimal.Domain.User.Users;
+namespace Minimal.Domain.Users;
 
 public class User : EntityModel
 {

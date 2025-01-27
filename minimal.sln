@@ -12,6 +12,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Minimal.Domain", "src\Minim
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Minimal.Features", "src\Minimal.Features\Minimal.Features.csproj", "{DA5ACC4A-0912-4DCB-B52C-698087C3C62C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Minimal.Infra.Data", "src\Minimal.Infra.Data\Minimal.Infra.Data.csproj", "{2CEB1CF2-F240-4627-8A0C-27DB1D7B6724}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,6 +32,10 @@ Global
 		{DA5ACC4A-0912-4DCB-B52C-698087C3C62C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DA5ACC4A-0912-4DCB-B52C-698087C3C62C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DA5ACC4A-0912-4DCB-B52C-698087C3C62C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CEB1CF2-F240-4627-8A0C-27DB1D7B6724}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CEB1CF2-F240-4627-8A0C-27DB1D7B6724}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CEB1CF2-F240-4627-8A0C-27DB1D7B6724}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CEB1CF2-F240-4627-8A0C-27DB1D7B6724}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -41,5 +47,6 @@ Global
 		{F4093985-96E7-B6C7-2554-51D1453EF7F7} = {973913BD-FDD1-4D11-86E3-1BFA6468E216}
 		{7EF082A8-C037-4B8D-AA7C-93B424AC6203} = {973913BD-FDD1-4D11-86E3-1BFA6468E216}
 		{DA5ACC4A-0912-4DCB-B52C-698087C3C62C} = {973913BD-FDD1-4D11-86E3-1BFA6468E216}
+		{2CEB1CF2-F240-4627-8A0C-27DB1D7B6724} = {973913BD-FDD1-4D11-86E3-1BFA6468E216}
 	EndGlobalSection
 EndGlobal
