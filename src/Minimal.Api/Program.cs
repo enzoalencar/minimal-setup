@@ -3,6 +3,7 @@ using FastEndpoints.Security;
 using FastEndpoints.Swagger;
 using Microsoft.EntityFrameworkCore;
 using Minimal.Features.Users.Commands;
+using Minimal.Features.Users.Queries;
 using Minimal.Infra.Data;
 using Serilog;
 
@@ -27,6 +28,7 @@ bld.Services
 
 //TODO: Remove this from Program.cs
 bld.Services.AddScoped<CreateUser.Handler>();
+bld.Services.AddScoped<ListUsers.Handler>();
 
 var app = bld.Build();
 
