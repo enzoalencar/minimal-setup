@@ -42,16 +42,10 @@ public static class CreateUser
         }
     }
 
-    public sealed class Handler : ICommandHandler<Command, Response>
+    public sealed class Handler(AppDbContext dbContext, ILogger logger) : ICommandHandler<Command, Response>
     {
-        private readonly AppDbContext _dbContext;
-        private readonly ILogger _logger;
-
-        public Handler(AppDbContext dbContext, ILogger logger)
-        {
-            _dbContext = dbContext;
-            _logger = logger;
-        }
+        private readonly AppDbContext _dbContext = dbContext;
+        private readonly ILogger _logger = logger;
 
         public async Task<Response> ExecuteAsync(Command command, CancellationToken ct)
         {

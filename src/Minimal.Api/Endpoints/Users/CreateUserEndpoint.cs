@@ -4,7 +4,7 @@ using Minimal.Features.Users.Commands;
 
 namespace Minimal.Api.Endpoints.Users;
 
-[HttpPost("/api/user/create")]
+[HttpPost("/user/create")]
 [AllowAnonymous]
 public class CreateUserEndpoint : Endpoint<CreateUser.Command, CreateUser.Response>
 {
