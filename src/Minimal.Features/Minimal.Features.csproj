@@ -8,6 +8,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="FastEndpoints" Version="5.33.0" />
+    <PackageReference Include="Serilog" Version="4.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Minimal.Domain\Minimal.Domain.csproj" />
+    <ProjectReference Include="..\Minimal.Infra.Data\Minimal.Infra.Data.csproj" />
   </ItemGroup>
 
 </Project>

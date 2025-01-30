@@ -6,13 +6,13 @@ namespace Minimal.Api.Endpoints.Users;
 
 [HttpPost("/api/user/create")]
 [AllowAnonymous]
-public class CreateUserEndpoint : Endpoint<CreateUserRequest, CreateUserResponse>
+public class CreateUserEndpoint : Endpoint<CreateUser.Command, CreateUser.Response>
 {
-    public override async Task HandleAsync(CreateUserRequest req, CancellationToken ct)
+    public override async Task HandleAsync(CreateUser.Command command, CancellationToken ct)
     {
-        await SendAsync(new()
-        {
-            Message = $"User {req.Name} was created"
-        });
+        var handler = Resolve<CreateUser.Handler>();
+        var res = await handler.ExecuteAsync(command, ct);
+        
+        await SendAsync(res, cancellation: ct);
     }
 }

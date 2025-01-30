@@ -2,10 +2,15 @@ using FastEndpoints;
 using FastEndpoints.Security;
 using FastEndpoints.Swagger;
 using Microsoft.EntityFrameworkCore;
+using Minimal.Features.Users.Commands;
 using Minimal.Infra.Data;
+using Serilog;
 
 var bld = WebApplication.CreateBuilder();
 var connectionString = bld.Configuration.GetConnectionString("DefaultConnection");
+
+bld.Host.UseSerilog((context, services, configuration) =>
+    configuration.ReadFrom.Configuration(context.Configuration));
 
 bld.Services
     .AddAuthenticationJwtBearer(s => s.SigningKey = "Secret")
@@ -19,6 +24,9 @@ bld.Services
             s.Version = "v1.0";
         };
     });
+
+//TODO: Remove this from Program.cs
+bld.Services.AddScoped<CreateUser.Handler>();
 
 var app = bld.Build();
 
