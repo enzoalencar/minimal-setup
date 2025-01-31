@@ -1,9 +1,9 @@
 using FastEndpoints;
 using FluentValidation;
-using Minimal.Infra.Data;
 using Minimal.Domain.Users;
 using ILogger = Serilog.ILogger;
 using Minimal.Domain.Shared.Enums;
+using Minimal.Domain.Users.Repository;
 
 namespace Minimal.Features.Users.Commands;
 
@@ -42,17 +42,16 @@ public static class CreateUser
         }
     }
 
-    public sealed class Handler(AppDbContext dbContext, ILogger logger) : ICommandHandler<Command, Response>
+    public sealed class Handler(IUserRepository userRepository, ILogger logger) : ICommandHandler<Command, Response>
     {
-        private readonly AppDbContext _dbContext = dbContext;
+        private readonly IUserRepository _userRepository = userRepository;
         private readonly ILogger _logger = logger;
 
         public async Task<Response> ExecuteAsync(Command command, CancellationToken ct)
         {
             var user = User.Factory.Create(command.Name, command.Email, command.PhoneNumber);
 
-            await _dbContext.Users.AddAsync(user, ct);
-            await _dbContext.SaveChangesAsync(ct);
+            await _userRepository.AddAsync(user, ct);
 
             _logger.Information("User created: {@User}", user);
 
