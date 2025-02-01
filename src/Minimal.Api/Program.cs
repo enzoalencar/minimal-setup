@@ -18,7 +18,8 @@ builder.Services
     .AddFastEndpoints()
     .AddDbContext<AppDbContext>(options => options.UseNpgsql(connectionString))
     .AddSwagger()
-    .AddApplicationServices();
+    .AddApplicationServices()
+    .AddRepositories();
 
 var app = builder.Build();
 

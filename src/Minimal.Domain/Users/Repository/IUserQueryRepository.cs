@@ -1,8 +1,8 @@
-using Minimal.Domain.Users.DTOs;
+using Minimal.Domain.Users;
 
-namespace Minimal.Domain.Users.Repository;
+namespace Minimal.Features.Users.Queries.Repository;
 
 public interface IUserQueryRepository
 {
-    Task<List<UserDto>> GetUsersAsync(CancellationToken ct);
+    Task<List<User>> GetUsersAsync(CancellationToken ct);
 }

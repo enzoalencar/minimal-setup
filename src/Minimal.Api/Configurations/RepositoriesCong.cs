@@ -1,4 +1,5 @@
 using Minimal.Domain.Users.Repository;
+using Minimal.Features.Users.Queries.Repository;
 using Minimal.Infra.Data.Repositories;
 using Minimal.Infra.Data.Repositories.Queries;
 

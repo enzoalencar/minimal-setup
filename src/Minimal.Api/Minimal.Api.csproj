@@ -21,10 +21,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Minimal.Features\Minimal.Features.csproj" />
-    
-    <!-- Remove -->
-    <ProjectReference Include="..\Minimal.Domain\Minimal.Domain.csproj" />
-    <ProjectReference Include="..\Minimal.Infra.Data\Minimal.Infra.Data.csproj" />
   </ItemGroup>
 
 </Project>

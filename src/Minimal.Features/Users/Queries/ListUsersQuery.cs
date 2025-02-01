@@ -1,15 +1,13 @@
-using Minimal.Infra.Data;
-using Microsoft.EntityFrameworkCore;
-using Minimal.Domain.Users.Repository;
-using Minimal.Domain.Users.DTOs;
+using Minimal.Domain.Users;
+using Minimal.Features.Users.Queries.Repository;
 
 namespace Minimal.Features.Users.Queries;
 
 public static class ListUsers
 {
-    public sealed class Response(List<UserDto> users)
+    public sealed class Response(List<User> users)
     {
-        public List<UserDto> Users { get; init; } = users ?? [];
+        public List<User> Users { get; init; } = users ?? [];
     }
 
     public sealed class Handler(IUserQueryRepository userQueryRepository)
