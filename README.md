@@ -1,6 +1,6 @@
 ## Description
 
-The goal of minimal-setup is to explore **Minimal API** concepts using **Fast Endpoints** and practice base programming concepsts:
+The goal of minimal-setup was to explore **Minimal API** concepts using [**FastEndpoints**](https://fast-endpoints.com/) and practice base programming concepsts:
 
 - Main Archtecture
     - [Vertical Slice](https://www.jimmybogard.com/vertical-slice-architecture/)
